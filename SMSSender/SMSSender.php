@@ -126,7 +126,7 @@ class SMSSender
         return sprintf("%'.02s", dechex(strlen($tpUDH . $tpUD) / 2));
     }
 
-    function getDA(): string
+    private function getDA(): string
     {
         // перемешивание символов в номере        
         $number = $this->number;        
@@ -134,6 +134,7 @@ class SMSSender
         $number = str_split($number, 2);
         
         $tmp = '';
+ 
         foreach($number as $value){            
             $tmp .=  strrev($value);
         }
