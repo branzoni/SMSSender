@@ -1,6 +1,6 @@
 <?php
 
-class Sender
+class SMSSender
 {
     protected Modem $modem;
     protected String $number;
